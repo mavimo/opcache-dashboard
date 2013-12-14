@@ -119,7 +119,7 @@ function getStringFromPropertyAndValue($property, $value)
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Zend OPcache <?= $config['version']['version']?></a>
+        <a class="navbar-brand" href="#">PHP <?= phpversion() ?> and OPcache <?= $config['version']['version'] ?></a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -135,12 +135,6 @@ function getStringFromPropertyAndValue($property, $value)
 </nav>
 
 <div class="container">
-    <div class="jumbotron">
-        <h1>OPcache Dashboard</h1>
-        <h2>by Carlos Buenosvinos (<a href="https://twitter.com/buenosvinos">@buenosvinos</a>)</h2>
-        <p>PHP: <?= phpversion() ?> and OPcache: <?= $config['version']['version'] ?></p>
-    </div>
-
     <?php
     $stats = $status['opcache_statistics'];
     $hitRate = round($stats['opcache_hit_rate'], 2);
